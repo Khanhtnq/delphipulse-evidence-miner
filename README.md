@@ -10,6 +10,7 @@
 [![Network](https://img.shields.io/badge/Gensyn%20Network-Chain%20ID%20685685-amber.svg)](https://agent-competition.gensyn.ai)
 
 - **Live Interactive Web Cockpit**: [https://khanhtnq.github.io/delphipulse-evidence-miner/](https://khanhtnq.github.io/delphipulse-evidence-miner/)
+- **YouTube Demo Video (1080p Narrated)**: [https://youtu.be/2Wt5PMp0Vfw](https://youtu.be/2Wt5PMp0Vfw) ([Watch on YouTube](https://www.youtube.com/watch?v=2Wt5PMp0Vfw))
 - **1080p Demo Video (`40s`, `30fps`)**: [`assets/demo_1080p.mp4`](assets/demo_1080p.mp4) | [Hosted MP4](https://khanhtnq.github.io/delphipulse-evidence-miner/demo_1080p.mp4)
 - **Gensyn Delphi Protocol Feedback Report (5 × $250 Bounties)**: [`PROTOCOL_FEEDBACK_REPORT.md`](PROTOCOL_FEEDBACK_REPORT.md)
 - **DoraHacks Submission Package**: [`SUBMISSION_PACKAGE.md`](SUBMISSION_PACKAGE.md)
