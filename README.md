@@ -11,6 +11,8 @@
 
 - **Live Interactive Web Cockpit**: [https://khanhtnq.github.io/delphipulse-evidence-miner/](https://khanhtnq.github.io/delphipulse-evidence-miner/)
 - **1080p Demo Video (`40s`, `30fps`)**: [`assets/demo_1080p.mp4`](assets/demo_1080p.mp4) | [Hosted MP4](https://khanhtnq.github.io/delphipulse-evidence-miner/demo_1080p.mp4)
+- **Gensyn Delphi Protocol Feedback Report (5 × $250 Bounties)**: [`PROTOCOL_FEEDBACK_REPORT.md`](PROTOCOL_FEEDBACK_REPORT.md)
+- **DoraHacks Submission Package**: [`SUBMISSION_PACKAGE.md`](SUBMISSION_PACKAGE.md)
 
 ---
 
@@ -87,7 +89,7 @@ Delphi enables prediction markets settled by reproducible machine learning judge
 Requires Python 3.10+:
 
 ```bash
-git clone <repo-url> delphipulse
+git clone https://github.com/Khanhtnq/delphipulse-evidence-miner.git delphipulse
 cd delphipulse
 python -m pip install -e .
 ```
@@ -160,12 +162,24 @@ docs/
 └── index.html            # DelphiPulse Arena interactive cockpit
 tests/
 └── test_delphipulse.py   # Comprehensive test suite (36 tests)
-pyproject.toml            # Build configuration and linting rules
-SUBMISSION_PACKAGE.md     # DoraHacks BUIDL submission package
+pyproject.toml              # Build configuration, pytest & linting rules
+PROTOCOL_FEEDBACK_REPORT.md # Deep Gensyn Delphi protocol feedback (5 x $250 bounties)
+SUBMISSION_PACKAGE.md       # DoraHacks BUIDL submission package
 ```
 
 ---
 
-## 6. License
+## 6. Gensyn Delphi Protocol Feedback ($5 \times \$250$ Bounties)
+
+In addition to Track `4797` (Evidence Mining Agents), we compiled a quantitative systems engineering audit in [`PROTOCOL_FEEDBACK_REPORT.md`](PROTOCOL_FEEDBACK_REPORT.md) covering:
+1. **Hanson LMSR Liquidity `b` Sensitivity**: Exact price-impact collapse ($\partial P / \partial q = P(1-P)/b$, $250\times$ drop from $p=0.50$ to $p=0.999$) and LS-LMSR / Log-Sum-Exp mitigation.
+2. **KL-Divergence Reward Scaling vs. Wash-Splitting & Stale-Prior Sybils**: Proof of sequential Bregman disincentive (`0.1970` vs `0.5310` bits) vs. `3.0x` parallel stale-prior extraction (`$297.94` vs `$99.31` on a `$1k` pot) and resolution-conditioned escrow holdbacks.
+3. **Gensyn REE Canonical JSON Edge Cases**: Reproducible SHA-256 hash divergence for `-0.0` vs `0.0`, NFC vs NFD Unicode, and `ensure_ascii` drift—recommending RFC 8785 (JCS) and fixed-point integer strings.
+4. **Anti-Self-Cancellation Cooldowns**: Replacing permanent binary stance locks with a $6\text{h}$ cooldown + explicit retraction + net-Brier scoring to support honest Bayesian updates.
+5. **Live SDK & Subgraph Ergonomics**: Lossless `10^18` / `10^6` BigInt/Decimal parsing, competition CORS headers, and `/v1/subgraph/meta` discovery.
+
+---
+
+## 7. License
 
 MIT License. See [LICENSE](LICENSE) for details.
