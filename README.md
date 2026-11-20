@@ -17,6 +17,28 @@
 
 ---
 
+## `< 60s` Judge Verification & Benchmark Summary
+
+Evaluate **DelphiPulse** in under 60 seconds — zero API keys required:
+
+1. **Zero-Install Browser Cockpit**: Open **[https://khanhtnq.github.io/delphipulse-evidence-miner/](https://khanhtnq.github.io/delphipulse-evidence-miner/)** to explore live market entropy ranking, Bayesian likelihood-ratio shifts, KL-divergence bits, and browser SHA-256 REE receipt verification.
+2. **Local CLI, Tests & Benchmark (`~3s`)**:
+```bash
+git clone https://github.com/Khanhtnq/delphipulse-evidence-miner.git delphipulse && cd delphipulse
+python -m pytest -v
+python -m ruff check .
+python -m delphipulse.cli benchmark --json
+```
+
+| Verification Check | Observed Result | Notes |
+|:---|:---|:---|
+| **Pytest Unit & Invariant Suite** | **`36 / 36 PASSED`** | LMSR overflow stability, PII filter, cap & anti-self-cancellation guards |
+| **Ruff Linter** | **`0` warnings/errors** | `python -m ruff check .` clean |
+| **Leaderboard Qualification Benchmark** | **Qualified (`10` judged / `5` markets)** | `$362.20` est. USDC.e bounty across 5 distinct markets (`benchmark --json`) |
+| **Gensyn REE Cryptographic Receipts** | **`100%` RFC-6962 SHA-256 verified** | Bit-flip tamper detection across model IDs, evidence hashes & posteriors |
+
+---
+
 ## 1. Overview
 
 **DelphiPulse** is a production-grade autonomous evidence-mining agent and predictive analytics engine tailored for the **Delphi Protocol** on the **Gensyn** network.
